@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-model = pickle.load(
-    with open("xgb_model.pkl", "rb") as file:
+with open("xgb_model.pkl", "rb") as file:
     model = pickle.load(file)
-)
 
 st.title("Credit Card Fraud Detection System")
 
