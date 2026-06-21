@@ -1,7 +1,12 @@
 import streamlit as st
 import pandas as pd
 import pickle
+st.title("💳 Credit Card Fraud Detection System")
 
+st.markdown("""
+This application predicts whether a credit card transaction is
+fraudulent using an XGBoost machine learning model.
+""")
 with open("xgb_model.pkl", "rb") as file:
     model = pickle.load(file)
 
