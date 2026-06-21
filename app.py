@@ -3,10 +3,8 @@ import pandas as pd
 import pickle
 
 model = pickle.load(
-    open(
-        r"C:\Users\rahul\OneDrive\Pictures\Desktop\Elleven labs- AI andML\xgb_model.pkl",
-        "rb"
-    )
+    with open("xgb_model.pkl", "rb") as file:
+    model = pickle.load(file)
 )
 
 st.title("Credit Card Fraud Detection System")
