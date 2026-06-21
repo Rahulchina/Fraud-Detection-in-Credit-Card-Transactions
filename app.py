@@ -41,15 +41,3 @@ if st.button("Predict Fraud"):
         st.success(
             f"Legitimate Transaction\nProbability: {(1-probability):.2%}"
         )
-import streamlit as st
-import pickle
-
-try:
-    with open("xgb_model.pkl", "rb") as file:
-        model = pickle.load(file)
-
-    st.success("Model loaded successfully")
-
-except Exception as e:
-    st.error(f"Error loading model: {e}")
-    st.stop()
